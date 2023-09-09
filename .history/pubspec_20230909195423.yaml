@@ -1,7 +1,7 @@
 name: slickpayapi
 description: SlickPAY API
 version: 0.0.2
-homepage: https://github.com/Slick-Pay-Algeria/SlickPAY-API-Flutter
+homepage: https://slick-pay.com
 
 environment:
   sdk: '>=2.12.0 <4.0.0'
