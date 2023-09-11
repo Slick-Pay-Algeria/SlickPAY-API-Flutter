@@ -61,7 +61,7 @@ class ContactRepository {
     }
   }
 
-  Future<Contact> getContact({required String uuid}) async {
+  Future<Contact> getContact({String uuid}) async {
     try {
       final response = await ApiClient.instance.get(
         "${API.contacts}/$uuid",

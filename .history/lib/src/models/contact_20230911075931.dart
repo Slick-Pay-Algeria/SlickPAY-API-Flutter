@@ -19,7 +19,7 @@ class Contact {
 
   factory Contact.fromJson(Map<String, dynamic> json) {
     return Contact(
-      uuid: json['uuid'] ?? "",
+        uuid: json['uuid'] ?? "",
       title: json['title'] ?? "",
       lastName: json['lastname'] ?? "",
       firstName: json['firstname'] ?? "",

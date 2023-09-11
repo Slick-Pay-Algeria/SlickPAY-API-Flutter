@@ -38,16 +38,17 @@ class ContactRepository {
     required String address,
     required String rib,
   }) async {
+   
     try {
       final response = await ApiClient.instance.post(
         API.contacts,
         json.encode({
-          "title": title,
-          "lastname": lastname,
-          "firstname": firstname,
-          "email": email,
-          "address": address,
-          "rib": rib
+              "title" : title,
+        "lastname": "Lorem",
+        "firstname": firstname,
+        "email": "lorem@ipsum.com",
+        "address": "Lorem Ipsum Address",
+        "rib": "12345678912345678900"
         }),
       );
 
@@ -61,7 +62,7 @@ class ContactRepository {
     }
   }
 
-  Future<Contact> getContact({required String uuid}) async {
+  Future<Contact> getContact(String uuid) async {
     try {
       final response = await ApiClient.instance.get(
         "${API.contacts}/$uuid",

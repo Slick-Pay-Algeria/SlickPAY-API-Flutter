@@ -8,7 +8,7 @@ class Contact {
   final String? rib;
 
   Contact({
-    required this.uuid,
+    required this.
     required this.title,
     required this.lastName,
     required this.firstName,
@@ -19,7 +19,6 @@ class Contact {
 
   factory Contact.fromJson(Map<String, dynamic> json) {
     return Contact(
-      uuid: json['uuid'] ?? "",
       title: json['title'] ?? "",
       lastName: json['lastname'] ?? "",
       firstName: json['firstname'] ?? "",

@@ -38,17 +38,18 @@ class ContactRepository {
     required String address,
     required String rib,
   }) async {
+    final userData = Contact(
+      title: title,
+      lastName: lastname,
+      firstName: firstname,
+      email: email,
+      address: address,
+      rib: rib,
+    );
     try {
       final response = await ApiClient.instance.post(
         API.contacts,
-        json.encode({
-          "title": title,
-          "lastname": lastname,
-          "firstname": firstname,
-          "email": email,
-          "address": address,
-          "rib": rib
-        }),
+        json.encode(),
       );
 
       if (response.statusCode == 200) {
@@ -61,7 +62,7 @@ class ContactRepository {
     }
   }
 
-  Future<Contact> getContact({required String uuid}) async {
+  Future<Contact> getContact(String uuid) async {
     try {
       final response = await ApiClient.instance.get(
         "${API.contacts}/$uuid",

@@ -20,7 +20,7 @@ class Account {
   factory Account.fromJson(Map<String, dynamic> json) {
     return Account(
       id: json['id'] ?? 0,
-      uuid: json['uuid'] ?? "",
+      rib: json['uuid'] ?? "",
       rib: json['rib'] ?? "",
       title: json['title'] ?? "",
       lastname: json['lastname'] ?? "",

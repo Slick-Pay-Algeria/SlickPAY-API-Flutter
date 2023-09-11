@@ -1,15 +1,14 @@
 class Account {
   final int? id;
-  final String? uuid;
+   final String? uuid;
   final String? rib;
   final String? title;
   final String? lastname;
   final String? firstname;
   final String? address;
 
-  Account({
+  Account(this.uuid, {
     required this.id,
-    required this.uuid,
     required this.rib,
     required this.title,
     required this.lastname,
@@ -20,7 +19,6 @@ class Account {
   factory Account.fromJson(Map<String, dynamic> json) {
     return Account(
       id: json['id'] ?? 0,
-      uuid: json['uuid'] ?? "",
       rib: json['rib'] ?? "",
       title: json['title'] ?? "",
       lastname: json['lastname'] ?? "",

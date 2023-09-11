@@ -1,5 +1,6 @@
 class Contact {
-  final String? uuid;
+    final String? uuid;
+
   final String? title;
   final String? lastName;
   final String? firstName;
@@ -8,7 +9,6 @@ class Contact {
   final String? rib;
 
   Contact({
-    required this.uuid,
     required this.title,
     required this.lastName,
     required this.firstName,
@@ -19,13 +19,12 @@ class Contact {
 
   factory Contact.fromJson(Map<String, dynamic> json) {
     return Contact(
-      uuid: json['uuid'] ?? "",
-      title: json['title'] ?? "",
-      lastName: json['lastname'] ?? "",
-      firstName: json['firstname'] ?? "",
-      email: json['email'] ?? "",
-      address: json['address'] ?? "",
-      rib: json['rib'] ?? "",
+      title: json['title'] ?? "" ,
+      lastName: json['lastname'] ?? "" ,
+      firstName: json['firstname'] ?? "" ,
+      email: json['email'] ?? "" ,
+      address: json['address'] ?? "" ,
+      rib: json['rib'] ?? "" ,
     );
   }
 
