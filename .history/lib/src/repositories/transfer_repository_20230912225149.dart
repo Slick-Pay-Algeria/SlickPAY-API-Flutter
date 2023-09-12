@@ -30,7 +30,6 @@ class TransferRepository {
   Future<Response> createTransfer({
     required double amount,
     String contact = '',
-     String account = '',
     required String url,
   }) async {
     try {
@@ -39,7 +38,6 @@ class TransferRepository {
           jsonEncode({
             "amount": amount,
             "contact": contact,
-            "account":account,
             "url": url,
           }));
 

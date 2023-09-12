@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart';
-import '../api.dart';
+ import '../api.dart';
 import '../models/_models.dart';
 import '../network.dart';
 
@@ -29,8 +29,7 @@ class TransferRepository {
 
   Future<Response> createTransfer({
     required double amount,
-    String contact = '',
-     String account = '',
+      String contact,
     required String url,
   }) async {
     try {
@@ -39,7 +38,6 @@ class TransferRepository {
           jsonEncode({
             "amount": amount,
             "contact": contact,
-            "account":account,
             "url": url,
           }));
 

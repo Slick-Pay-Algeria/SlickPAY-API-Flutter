@@ -39,7 +39,7 @@ class TransferRepository {
           jsonEncode({
             "amount": amount,
             "contact": contact,
-            "account":account,
+            
             "url": url,
           }));
 
