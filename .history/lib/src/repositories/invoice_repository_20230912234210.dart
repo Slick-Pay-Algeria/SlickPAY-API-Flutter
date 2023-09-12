@@ -28,7 +28,7 @@ class InvoiceRepository {
     }
   }
 
-  Future<String> createInvoice({
+  Future<http.Response> createInvoice({
     required double amount,
     String contact = '',
     String account = '',
@@ -48,7 +48,7 @@ class InvoiceRepository {
       );
 
       if (response.statusCode == 200) {
-        final successMsg = jsonDecode(response.body);
+          final successMsg = jsonDecode(response.body);
         return successMsg['message'];
       } else {
         throw Exception('Failed to create invoice ${response.body}');

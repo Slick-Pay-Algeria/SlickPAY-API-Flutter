@@ -33,7 +33,7 @@ class AggregationRepository {
     }
   }
 
-  Future<String> createAggregation({
+  Future<Response> createAggregation({
     required String url,
     required double total,
     required List<dynamic> contacts,

@@ -23,8 +23,8 @@ class AggregationRepository {
       );
 
       if (response.statusCode == 200) {
-        final responseData = json.decode(response.body);
-        return responseData;
+        final successMsg = jsonDecode(response.body);
+        return successMsg['message'];
       } else {
         throw Exception('Failed to calculate Aggregation Commission');
       }
@@ -33,7 +33,7 @@ class AggregationRepository {
     }
   }
 
-  Future<String> createAggregation({
+  Future<Response> createAggregation({
     required String url,
     required double total,
     required List<dynamic> contacts,
@@ -49,8 +49,7 @@ class AggregationRepository {
           }));
 
       if (response.statusCode == 200) {
-        final successMsg = jsonDecode(response.body);
-        return successMsg['message'];
+        return jsonDecode(response.body);
       } else {
         throw Exception('Failed to create aggregation');
       }

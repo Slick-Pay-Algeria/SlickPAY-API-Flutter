@@ -28,7 +28,7 @@ class InvoiceRepository {
     }
   }
 
-  Future<String> createInvoice({
+  Future<http.Response> createInvoice({
     required double amount,
     String contact = '',
     String account = '',
