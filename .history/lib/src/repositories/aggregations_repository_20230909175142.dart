@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart';
-import '../api.dart';
+ import '../api.dart';
 import '../models/_models.dart';
 import '../network.dart';
 
@@ -49,7 +49,8 @@ class AggregationRepository {
           }));
 
       if (response.statusCode == 200) {
-        return jsonDecode(response.body);
+        final responseData = json.decode(response.body);
+        return responseData;
       } else {
         throw Exception('Failed to create aggregation');
       }

@@ -50,6 +50,7 @@ class AggregationRepository {
 
       if (response.statusCode == 200) {
         return jsonDecode(response.body);
+        ;
       } else {
         throw Exception('Failed to create aggregation');
       }
