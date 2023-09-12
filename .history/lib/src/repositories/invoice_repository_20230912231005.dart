@@ -41,7 +41,7 @@ class InvoiceRepository {
         jsonEncode({
           "amount": amount,
           "contact": contact,
-          "account": account,
+          "":account
           "url": url,
           "items": items,
         }),

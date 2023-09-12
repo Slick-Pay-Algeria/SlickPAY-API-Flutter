@@ -30,8 +30,7 @@ class InvoiceRepository {
 
   Future<http.Response> createInvoice({
     required double amount,
-    String contact = '',
-    String account = '',
+    required String contact,
     required String url,
     required List<dynamic> items,
   }) async {
@@ -41,7 +40,6 @@ class InvoiceRepository {
         jsonEncode({
           "amount": amount,
           "contact": contact,
-          "account": account,
           "url": url,
           "items": items,
         }),

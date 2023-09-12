@@ -8,8 +8,7 @@ class TransferRepository {
   TransferRepository._();
   static final TransferRepository instance = TransferRepository._();
 
-  Future<http.Response> calculateTransferCommission(
-      {required double amount}) async {
+  Future<Response> calculateTransferCommission({required double amount}) async {
     try {
       final response = await ApiClient.instance.post(
           "${API.transfers}/commission",
@@ -28,10 +27,10 @@ class TransferRepository {
     }
   }
 
-  Future<http.Response> createTransfer({
+  Future<Response> createTransfer({
     required double amount,
     String contact = '',
-    String account = '',
+     String account = '',
     required String url,
   }) async {
     try {
@@ -40,7 +39,7 @@ class TransferRepository {
           jsonEncode({
             "amount": amount,
             "contact": contact,
-            "account": account,
+            "account":account,
             "url": url,
           }));
 
@@ -57,7 +56,7 @@ class TransferRepository {
     }
   }
 
-  Future<http.Response> getTransferById({required int? id}) async {
+  Future<Response> getTransferById({required int? id}) async {
     final response = await ApiClient.instance.get(
       "${API.transfers}/$id",
     );
@@ -95,7 +94,7 @@ class TransferRepository {
     }
   }
 
-  Future<http.Response> updateTransfer({
+  Future<Response> updateTransfer({
     required int id,
     required double amount,
     required String contact,
