@@ -47,7 +47,7 @@ class TransferRepository {
       if (response.statusCode == 200) {
         final successMsg = jsonDecode(response.body);
 
-        return successMsg['message'];
+        return successMsg[''];
       } else if (response.statusCode == 422) {
         throw Exception('Failed to create Transfer ${response.body}');
       } else {
