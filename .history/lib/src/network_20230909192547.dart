@@ -10,7 +10,7 @@ class ApiClient {
     return {
       "Content-Type": "application/json",
       "Accept": "application/json",
-      "Authorization": "Bearer ${SlickPAYAppConfig.publicKEY}",
+      "Authorization": "Bearer ${SlickPAYAppConfig.publicKey}",
     };
   }
 

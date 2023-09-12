@@ -3,10 +3,10 @@ class SlickPAYAppConfig {
   static String publicKEY = "57|74wHgIsMKIGomdIEgyBW5bSZ5Gw3vFYcfjPTF3wL";
 
   static void set({
-    required String baseUrl,
-    required String publicKey,
+    required String BaseUrl,
+    required String PublicKey,
   }) {
-    baseURL = baseUrl;
-    publicKEY = publicKey;
+    baseURL = BaseUrl;
+    publicKEY = PublicKey;
   }
 }

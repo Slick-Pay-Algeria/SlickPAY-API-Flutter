@@ -6,7 +6,7 @@ class SlickPAYAppConfig {
     required String baseUrl,
     required String publicKey,
   }) {
-    baseURL = baseUrl;
-    publicKEY = publicKey;
+    baseURL = BaseUrl;
+    publicKEY = PublicKey;
   }
 }

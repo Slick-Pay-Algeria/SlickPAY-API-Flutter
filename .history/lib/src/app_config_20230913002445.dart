@@ -4,9 +4,9 @@ class SlickPAYAppConfig {
 
   static void set({
     required String baseUrl,
-    required String publicKey,
+    required String PublicKey,
   }) {
-    baseURL = baseUrl;
-    publicKEY = publicKey;
+    baseURL = BaseUrl;
+    publicKEY = PublicKey;
   }
 }

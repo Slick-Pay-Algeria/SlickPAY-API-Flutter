@@ -1,7 +1,7 @@
 import 'app_config.dart';
 
 class API {
-  static String get baseUrl => SlickPAYAppConfig.baseURL;
+  static String get baseUrl => SlickPAYAppConfig.baseUrl;
 
   static const String accounts = "/users/accounts";
 
