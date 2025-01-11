@@ -36,7 +36,7 @@ You can find detailed installation and setup instructions in the [SlickPay API d
 To make transfers using the SlickPay API, you can utilize the `createTransfer` function from this package. Ensure you have configured the `SlickPAYAppConfig` class with your API credentials.
 
 ```dart
-import 'package:slickpay/slickpay.dart';
+import 'package:slickpayapi/slickpayapi.dart';
 
 void main() async {
 
