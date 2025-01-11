@@ -42,8 +42,8 @@ void main() async {
 
   // Initialize the SlickPay client with your API credentials.
   SlickPAYAppConfig.set(
-    BaseUrl: "https://devapi.slick-pay.com/api/v2", // Set the API base URL from AppConfig
-    PublicKey:  "57|74wHgIsMKIGomdIEgyBW5bSZ5Gw3vFYcfjPTF3wL", // Use your API Key from AppConfig
+    baseUrl: "https://devapi.slick-pay.com/api/v2", // Set the API base URL from AppConfig
+    publicKey:  "57|74wHgIsMKIGomdIEgyBW5bSZ5Gw3vFYcfjPTF3wL", // Use your API Key from AppConfig
 
   );
 
